@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginEnd="15dp"
+    android:layout_marginStart="15dp">
+
+    <Button
+        android:id="@+id/playing"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="播放原始音频"/>
+
+    <Button
+        android:id="@+id/agc_ns"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/playing"
+        android:text="增益降噪处理"/>
+
+    <Button
+        android:id="@+id/playing_process"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/agc_ns"
+        android:text="播放增益音频"/>
+
+    <RadioGroup
+        android:id="@+id/rg"
+        android:layout_marginTop="10dp"
+        android:layout_width="wrap_content"
+        android:layout_below="@id/playing_process"
+        android:layout_height="wrap_content">
+        <RadioButton
+            android:id="@+id/rb_8k"
+            android:text="测试 Hz_8000"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+        <RadioButton
+            android:id="@+id/rb_16k"
+            android:text="测试 Hz_16000"
+            android:checked="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+        <RadioButton
+            android:id="@+id/rb_32k"
+            android:text="测试 Hz_32000"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+        <RadioButton
+            android:id="@+id/rb_44k"
+            android:text="测试 Hz_44100"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+    </RadioGroup>
+    <EditText
+        android:id="@+id/edt_noise_suppression"
+        android:layout_width="100dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="20dp"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/rg"
+        android:gravity="center"
+        android:text="80"
+        android:hint="输入降噪功率0-6"
+        />
+
+</RelativeLayout>
